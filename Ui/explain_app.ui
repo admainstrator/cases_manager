@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>show_case_in_form</class>
+ <widget class="QMainWindow" name="show_case_in_form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1322</width>
+    <height>860</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>برنامج جمعية مسجد الرحمن لإدارة الحالات - كيفية الاستخدام - نسخة تجريبية -</string>
+  </property>
+  <property name="layoutDirection">
+   <enum>Qt::RightToLeft</enum>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QPushButton{
+
+    background-color:
+        linear-gradient(#f0ff35, #a9ff00),
+        radial-gradient(center 50% -40%, radius 200%, #b8ee36 45%, #80c800 50%);
+    background-radius: 6, 5;
+    background-insets: 0, 1;
+    effect: dropshadow( three-pass-box , rgba(0,0,0,0.4) , 5, 0.0 , 0 , 1 );
+    text-fill: #395306;
+
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>2</number>
+      </property>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string> واجهة ادخال البيانات   </string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="0" column="0">
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string/>
+          </property>
+          <property name="pixmap">
+           <pixmap>input_explain.png</pixmap>
+          </property>
+          <property name="scaledContents">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>البحث بالقوائم المنسدلة</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_2">
+          <property name="text">
+           <string/>
+          </property>
+          <property name="pixmap">
+           <pixmap>explain_output.png</pixmap>
+          </property>
+          <property name="scaledContents">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_3">
+       <attribute name="title">
+        <string>   البحث المتقدم   </string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_4">
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_3">
+          <property name="text">
+           <string/>
+          </property>
+          <property name="pixmap">
+           <pixmap>explain_search_adv.png</pixmap>
+          </property>
+          <property name="scaledContents">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1322</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="mn_cases">
+    <property name="title">
+     <string>الحالات</string>
+    </property>
+    <addaction name="mn_view_cases"/>
+    <addaction name="separator"/>
+    <addaction name="mn_input_cases"/>
+    <addaction name="separator"/>
+    <addaction name="mn_update_case"/>
+   </widget>
+   <widget class="QMenu" name="mn_search">
+    <property name="title">
+     <string>البحث</string>
+    </property>
+    <widget class="QMenu" name="mn_search_adv">
+     <property name="title">
+      <string>بحث متقدم</string>
+     </property>
+     <addaction name="mn_search_code"/>
+     <addaction name="mn_search_name"/>
+     <addaction name="mn_search_age"/>
+     <addaction name="mn_search_natid"/>
+     <addaction name="mn_search_salary"/>
+     <addaction name="mn_search_jop"/>
+     <addaction name="mn_search_count_f"/>
+     <addaction name="mn_search_phone"/>
+    </widget>
+    <addaction name="mn_search_cmb"/>
+    <addaction name="separator"/>
+    <addaction name="mn_search_adv"/>
+   </widget>
+   <widget class="QMenu" name="mn_print">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="title">
+     <string>طباعة التقارير</string>
+    </property>
+    <addaction name="action_15"/>
+    <addaction name="action_16"/>
+    <addaction name="action_17"/>
+   </widget>
+   <widget class="QMenu" name="mn_users">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="title">
+     <string>المستخدمين</string>
+    </property>
+    <addaction name="action_18"/>
+    <addaction name="action_19"/>
+    <addaction name="action_20"/>
+   </widget>
+   <widget class="QMenu" name="mn_about">
+    <property name="title">
+     <string>حول البرنامج</string>
+    </property>
+    <addaction name="mn_explain"/>
+    <addaction name="mn_contact"/>
+   </widget>
+   <widget class="QMenu" name="mn_accounting">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="title">
+     <string>الحسابات</string>
+    </property>
+    <addaction name="action_1"/>
+    <addaction name="action_2"/>
+    <addaction name="action_3"/>
+   </widget>
+   <widget class="QMenu" name="mn_statistics">
+    <property name="title">
+     <string>إحصائيات</string>
+    </property>
+    <addaction name="mn_cases_counter"/>
+   </widget>
+   <addaction name="mn_cases"/>
+   <addaction name="mn_search"/>
+   <addaction name="mn_statistics"/>
+   <addaction name="mn_print"/>
+   <addaction name="mn_users"/>
+   <addaction name="mn_accounting"/>
+   <addaction name="mn_about"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="mn_view_cases">
+   <property name="text">
+    <string>عرض الحالات</string>
+   </property>
+  </action>
+  <action name="mn_input_cases">
+   <property name="text">
+    <string>ادخال بيانات</string>
+   </property>
+  </action>
+  <action name="mn_update_case">
+   <property name="text">
+    <string>تحديث بيانات</string>
+   </property>
+  </action>
+  <action name="mn_search_cmb">
+   <property name="text">
+    <string>بحث بالقوائم المنسدلة</string>
+   </property>
+  </action>
+  <action name="mn_search_name">
+   <property name="text">
+    <string>بالاسم</string>
+   </property>
+  </action>
+  <action name="mn_search_age">
+   <property name="text">
+    <string>بالسن</string>
+   </property>
+  </action>
+  <action name="mn_search_natid">
+   <property name="text">
+    <string>الرقم القومي</string>
+   </property>
+  </action>
+  <action name="mn_search_salary">
+   <property name="text">
+    <string>مبلغ الدخل</string>
+   </property>
+  </action>
+  <action name="mn_search_jop">
+   <property name="text">
+    <string>الوظيفة</string>
+   </property>
+  </action>
+  <action name="mn_search_count_f">
+   <property name="text">
+    <string>عدد أفراد الحالة</string>
+   </property>
+  </action>
+  <action name="mn_search_phone">
+   <property name="text">
+    <string>رقم التليفون</string>
+   </property>
+  </action>
+  <action name="action_15">
+   <property name="text">
+    <string>تجريبي 1</string>
+   </property>
+  </action>
+  <action name="action_16">
+   <property name="text">
+    <string>تجريبي 2</string>
+   </property>
+  </action>
+  <action name="action_17">
+   <property name="text">
+    <string>تجريبي 3</string>
+   </property>
+  </action>
+  <action name="action_18">
+   <property name="text">
+    <string>تجريبي 1</string>
+   </property>
+  </action>
+  <action name="action_19">
+   <property name="text">
+    <string>تجريبي 2</string>
+   </property>
+  </action>
+  <action name="action_20">
+   <property name="text">
+    <string>تجريبي 3</string>
+   </property>
+  </action>
+  <action name="mn_explain">
+   <property name="text">
+    <string>كيفية الاستخدام</string>
+   </property>
+  </action>
+  <action name="mn_contact">
+   <property name="text">
+    <string>الاتصال بمطور البرنامج</string>
+   </property>
+  </action>
+  <action name="action_1">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>تجريبي 1</string>
+   </property>
+  </action>
+  <action name="action_2">
+   <property name="text">
+    <string>تجريبي 2</string>
+   </property>
+  </action>
+  <action name="action_3">
+   <property name="text">
+    <string>تجريبي 3</string>
+   </property>
+  </action>
+  <action name="mn_search_code">
+   <property name="text">
+    <string>بالكود</string>
+   </property>
+  </action>
+  <action name="mn_cases_counter">
+   <property name="text">
+    <string>عدد الحالات</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,1051 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>cases_counter</class>
+ <widget class="QMainWindow" name="cases_counter">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>471</width>
+    <height>526</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>برنامج جمعية مسجد الرحمن لإدارة الحالات - إحصائيات - نسخة تجريبية</string>
+  </property>
+  <property name="layoutDirection">
+   <enum>Qt::RightToLeft</enum>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+QLabel{
+background-color: rgb(85, 170, 255);
+	
+	color: rgb(255, 255, 255);
+}
+
+
+QPushButton{
+
+    background-color:
+        linear-gradient(#f0ff35, #a9ff00),
+        radial-gradient(center 50% -40%, radius 200%, #b8ee36 45%, #80c800 50%);
+    background-radius: 6, 5;
+    background-insets: 0, 1;
+    effect: dropshadow( three-pass-box , rgba(0,0,0,0.4) , 5, 0.0 , 0 , 1 );
+    text-fill: #395306;
+
+}
+
+QLabel{
+background-color: rgb(85, 170, 255);
+	
+	color: rgb(255, 255, 255);
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="9" column="0">
+     <widget class="QPushButton" name="btn_search_now">
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="toolTip">
+       <string>يرجي الاختيار من القوائم المنسدلة أعلاه</string>
+      </property>
+      <property name="text">
+       <string>بحث</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QLabel" name="label_3">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>16</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string> الفئة</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="case_class">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>16</pointsize>
+         </font>
+        </property>
+        <item>
+         <property name="text">
+          <string>الكل</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>أ -  أشد استحقاقا</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>ب - متوسطة الاستحقاق</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>ج - حالات موسمية</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>د - حالات مرفوضة</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="0" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QLabel" name="label_2">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>16</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string> نوع الحالة</string>
+        </property>
+        <property name="buddy">
+         <cstring>type_of_case</cstring>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="type_of_case">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>16</pointsize>
+         </font>
+        </property>
+        <item>
+         <property name="text">
+          <string>الكل</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>مرضي</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>أرملة</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>أيتام</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>مطلقة</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>هجر</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>اقتصادية</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>مسن</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>إعاقة</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="2" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout_4">
+      <item>
+       <widget class="QLabel" name="label_16">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>16</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>الصفة</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="parent_or_son">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>16</pointsize>
+         </font>
+        </property>
+        <item>
+         <property name="text">
+          <string>الكل</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>أب</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>أم</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>ابن</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>ابنة</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>جد / جدة</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>عم / عمة</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>خال / خالة</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>حالة منفردة</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="3" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout_5">
+      <item>
+       <widget class="QLabel" name="label_19">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>16</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string> نوع السكن</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="home_type">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>15</pointsize>
+         </font>
+        </property>
+        <item>
+         <property name="text">
+          <string>الكل</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>إيجار</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>ملك</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>عائلة</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="5" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout_7">
+      <item>
+       <widget class="QLabel" name="label_23">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>16</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>الحالة الصحية</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="health_status">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>16</pointsize>
+         </font>
+        </property>
+        <item>
+         <property name="text">
+          <string>الكل</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>جيد</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>متوسط</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>مريض</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>مرض مزمن</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="6" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout_8">
+      <item>
+       <widget class="QLabel" name="label_10">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>16</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>بيان الدخل</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="income_statement">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>16</pointsize>
+         </font>
+        </property>
+        <item>
+         <property name="text">
+          <string>الكل</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>لا يوجد</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>حر</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>حكومي</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>معاش ضمان إجتماعي</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>معاش تأمينات</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="4" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout_6">
+      <item>
+       <widget class="QLabel" name="label_8">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>16</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>الحالة التعليمية</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="learn_status">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>16</pointsize>
+         </font>
+        </property>
+        <item>
+         <property name="text">
+          <string>الكل</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>لا يوجد</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>محو أمية</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>حضانة</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>ابتدائي</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>اعدادى</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>ثانوي عام</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>ثانوي تجارى</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>ثانوي زراعي</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>ثانوي صناعي</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>جامعة</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>معهد</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="7" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout_9">
+      <item>
+       <widget class="QLabel" name="label_12">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>16</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>دخل من مصادر آخرى     </string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="other_income">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>16</pointsize>
+         </font>
+        </property>
+        <item>
+         <property name="text">
+          <string>الكل</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>لا يوجد</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>كفالة كاملة</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>موسمية</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>علاج</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>مشروع لزيادة الدخل</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>أقارب</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>آخرى</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="8" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout_10">
+      <item>
+       <widget class="QLabel" name="label_21">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>16</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string> إحتياجات الحالة   </string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="case_needs">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>16</pointsize>
+         </font>
+        </property>
+        <item>
+         <property name="text">
+          <string>الكل</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>مساعدات مالية شهرية</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>مساعدات موسمية</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>ادخال مرافق</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>أثاث</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>متابعة تعليم أولاد</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>حل مشاكل أسرية</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>مشروع لزيادة الدخل</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>طبية وعلاج</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>آخرى</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="11" column="0">
+     <widget class="QLabel" name="label">
+      <property name="font">
+       <font>
+        <family>Arial Unicode MS</family>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::WinPanel</enum>
+      </property>
+      <property name="lineWidth">
+       <number>1</number>
+      </property>
+      <property name="midLineWidth">
+       <number>1</number>
+      </property>
+      <property name="text">
+       <string>عدد الحالات</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="wordWrap">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="12" column="0">
+     <widget class="QLabel" name="lbl_show_result">
+      <property name="font">
+       <font>
+        <family>Arial Unicode MS</family>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::WinPanel</enum>
+      </property>
+      <property name="lineWidth">
+       <number>1</number>
+      </property>
+      <property name="midLineWidth">
+       <number>1</number>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="wordWrap">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>471</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="mn_cases">
+    <property name="title">
+     <string>الحالات</string>
+    </property>
+    <addaction name="mn_view_cases"/>
+    <addaction name="separator"/>
+    <addaction name="mn_input_cases"/>
+    <addaction name="separator"/>
+    <addaction name="mn_update_case"/>
+   </widget>
+   <widget class="QMenu" name="mn_search">
+    <property name="title">
+     <string>البحث</string>
+    </property>
+    <widget class="QMenu" name="mn_search_adv">
+     <property name="title">
+      <string>بحث متقدم</string>
+     </property>
+     <addaction name="mn_search_code"/>
+     <addaction name="mn_search_name"/>
+     <addaction name="mn_search_age"/>
+     <addaction name="mn_search_natid"/>
+     <addaction name="mn_search_salary"/>
+     <addaction name="mn_search_jop"/>
+     <addaction name="mn_search_count_f"/>
+     <addaction name="mn_search_phone"/>
+    </widget>
+    <addaction name="mn_search_cmb"/>
+    <addaction name="separator"/>
+    <addaction name="mn_search_adv"/>
+   </widget>
+   <widget class="QMenu" name="mn_print">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="title">
+     <string>طباعة التقارير</string>
+    </property>
+    <addaction name="action_15"/>
+    <addaction name="action_16"/>
+    <addaction name="action_17"/>
+   </widget>
+   <widget class="QMenu" name="mn_users">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="title">
+     <string>المستخدمين</string>
+    </property>
+    <addaction name="action_18"/>
+    <addaction name="action_19"/>
+    <addaction name="action_20"/>
+   </widget>
+   <widget class="QMenu" name="mn_about">
+    <property name="title">
+     <string>حول البرنامج</string>
+    </property>
+    <addaction name="mn_explain"/>
+    <addaction name="mn_contact"/>
+   </widget>
+   <widget class="QMenu" name="mn_accounting">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="title">
+     <string>الحسابات</string>
+    </property>
+    <addaction name="action_1"/>
+    <addaction name="action_2"/>
+    <addaction name="action_3"/>
+   </widget>
+   <widget class="QMenu" name="mn_statistics">
+    <property name="title">
+     <string>إحصائيات</string>
+    </property>
+    <addaction name="mn_cases_counter"/>
+   </widget>
+   <addaction name="mn_cases"/>
+   <addaction name="mn_search"/>
+   <addaction name="mn_statistics"/>
+   <addaction name="mn_print"/>
+   <addaction name="mn_users"/>
+   <addaction name="mn_accounting"/>
+   <addaction name="mn_about"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="mn_view_cases">
+   <property name="text">
+    <string>عرض الحالات</string>
+   </property>
+  </action>
+  <action name="mn_input_cases">
+   <property name="text">
+    <string>ادخال بيانات</string>
+   </property>
+  </action>
+  <action name="mn_update_case">
+   <property name="text">
+    <string>تحديث بيانات</string>
+   </property>
+  </action>
+  <action name="mn_search_cmb">
+   <property name="text">
+    <string>بحث بالقوائم المنسدلة</string>
+   </property>
+  </action>
+  <action name="mn_search_name">
+   <property name="text">
+    <string>بالاسم</string>
+   </property>
+  </action>
+  <action name="mn_search_age">
+   <property name="text">
+    <string>بالسن</string>
+   </property>
+  </action>
+  <action name="mn_search_natid">
+   <property name="text">
+    <string>الرقم القومي</string>
+   </property>
+  </action>
+  <action name="mn_search_salary">
+   <property name="text">
+    <string>مبلغ الدخل</string>
+   </property>
+  </action>
+  <action name="mn_search_jop">
+   <property name="text">
+    <string>الوظيفة</string>
+   </property>
+  </action>
+  <action name="mn_search_count_f">
+   <property name="text">
+    <string>عدد أفراد الحالة</string>
+   </property>
+  </action>
+  <action name="mn_search_phone">
+   <property name="text">
+    <string>رقم التليفون</string>
+   </property>
+  </action>
+  <action name="action_15">
+   <property name="text">
+    <string>تجريبي 1</string>
+   </property>
+  </action>
+  <action name="action_16">
+   <property name="text">
+    <string>تجريبي 2</string>
+   </property>
+  </action>
+  <action name="action_17">
+   <property name="text">
+    <string>تجريبي 3</string>
+   </property>
+  </action>
+  <action name="action_18">
+   <property name="text">
+    <string>تجريبي 1</string>
+   </property>
+  </action>
+  <action name="action_19">
+   <property name="text">
+    <string>تجريبي 2</string>
+   </property>
+  </action>
+  <action name="action_20">
+   <property name="text">
+    <string>تجريبي 3</string>
+   </property>
+  </action>
+  <action name="mn_explain">
+   <property name="text">
+    <string>كيفية الاستخدام</string>
+   </property>
+  </action>
+  <action name="mn_contact">
+   <property name="text">
+    <string>الاتصال بمطور البرنامج</string>
+   </property>
+  </action>
+  <action name="action_1">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>تجريبي 1</string>
+   </property>
+  </action>
+  <action name="action_2">
+   <property name="text">
+    <string>تجريبي 2</string>
+   </property>
+  </action>
+  <action name="action_3">
+   <property name="text">
+    <string>تجريبي 3</string>
+   </property>
+  </action>
+  <action name="mn_search_code">
+   <property name="text">
+    <string>بالكود</string>
+   </property>
+  </action>
+  <action name="mn_cases_counter">
+   <property name="text">
+    <string>عدد الحالات</string>
+   </property>
+  </action>
+ </widget>
+ <tabstops>
+  <tabstop>type_of_case</tabstop>
+  <tabstop>case_class</tabstop>
+  <tabstop>parent_or_son</tabstop>
+  <tabstop>home_type</tabstop>
+  <tabstop>learn_status</tabstop>
+  <tabstop>health_status</tabstop>
+  <tabstop>income_statement</tabstop>
+  <tabstop>other_income</tabstop>
+  <tabstop>case_needs</tabstop>
+  <tabstop>btn_search_now</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
